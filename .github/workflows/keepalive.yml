@@ -14,3 +14,4 @@ jobs:
           echo "Pinging backend at $(date)"
           curl -f -s https://sprdina-backend.onrender.com/ && echo "✓ Backend is awake" || echo "✗ Backend ping failed"
         continue-on-error: true
+
