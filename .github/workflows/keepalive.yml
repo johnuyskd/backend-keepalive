@@ -8,4 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Render Backend
-        run: curl -f https://sprdina-backend.onrender.com/ && echo "✓ Awake" || echo "✗ Failed"
+        run: |
+          echo "Pinging backend at $(date)"
+          curl -f -s https://sprdina-backend.onrender.com/ && echo "Backend is awake" || echo "Backend ping failed"
+        continue-on-error: true
